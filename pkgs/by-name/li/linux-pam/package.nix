@@ -98,6 +98,7 @@ stdenv.mkDerivation (finalAttrs: {
     (lib.mesonEnable "pam_unix" true)
     # (lib.mesonBool "pam-debug" true) # warning: slower execution due to debug makes VM tests fail!
     (lib.mesonOption "sysconfdir" "etc") # relative to meson prefix, which is $out
+    (lib.mesonOption "vendordir" "/etc")
     (lib.mesonEnable "elogind" false)
     (lib.mesonEnable "econf" false)
     (lib.mesonEnable "selinux" false)
